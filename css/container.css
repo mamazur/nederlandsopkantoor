@@ -1,3 +1,11 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 1rem;
+    background: var(--primary);
+    color: var(--white);
+}
 .headerb {
     display: flex;
     flex-direction: column;

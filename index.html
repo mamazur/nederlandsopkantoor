@@ -1,5 +1,4 @@
-<html lang="de">
-
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
@@ -9,27 +8,26 @@
     <link href="css/navigation.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
-    <script type="text/javascript" src="js/main.js"></script>
     <link rel="icon" type="image/ico" href="favicon.ico">
 </head>
 
 <body>
-    <nav class="header" id="header">
-        <div class="menu">
-            <div class="void"> </div>
-            <span id="topNav" class="nav-closed">
-                <a href="https://www.facebook.com/groups/209963557131414">FACEBOOK</a>
-                <a href="https://www.linkedin.com/in/tine-vermoere-860683172/">LINKEDIN</a>
-                <a href="https://www.youtube.com/channel/UCLAfOUTA-qUWsczRJmjZPPw">YOUTUBE</a>
-                <a href="https://www.buymeacoffee.com/businessdutch/posts">BLOG</a>
-                <a href="https://www.buymeacoffee.com/businessdutch/extras">SHOP</a>
-                <a href="https://www.buymeacoffee.com/businessdutch/extras" class="button">GO TO COURSES</a>
-            </span>
-            <a href="javascript:void(0);" class="mobile-menu-icon" onclick="toggleMobileNav()">
-                <span id="topNavMobileToggle" class="material-icons"><img id="menuImg" src="img/menu.svg"></span>
-            </a>
-        </div>
-    </nav>
+    <section class="top-nav">
+
+        <img src="img/flag-nl.svg" alt="flag netherlands" width="50" height="60">
+
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li> <a href="https://www.facebook.com/groups/209963557131414">FACEBOOK</a></li>
+            <li> <a href="https://www.linkedin.com/in/tine-vermoere-860683172/">LINKEDIN</a></li>
+            <li> <a href="https://www.youtube.com/channel/UCLAfOUTA-qUWsczRJmjZPPw">YOUTUBE</a></li>
+            <li> <a href="https://www.buymeacoffee.com/businessdutch/posts">BLOG</a></li>
+            <li> <a href="https://www.buymeacoffee.com/businessdutch/extras">SHOP</a></li>
+        </ul>
+    </section>
     <div class="headerb">
         <div class="title" id="title"></div>
         <h1>Nederlands op kantoor</h1>
@@ -96,21 +94,25 @@
         </p>
         <div class="container__bio">
             <div class="container__testi">
-                <p><i>Tine is een professionele docent Nederlands. Tijdens onze lessen toonde ze een hoge mate van
+                <i class="label"> <i>
+                        Tine is een professionele docent Nederlands. Tijdens onze lessen toonde ze een hoge mate van
                         betrokkenheid en professionaliteit. Ik heb geleerd hoe ik de Nederlandse taal voor
                         werkdoeleinden kan gebruiken. Ze is een positief en vriendelijk persoon, met een geweldige
-                        houding ten opzichte van lesgeven. </i></p>
+                        houding ten opzichte van lesgeven.
+                    </i></i>
                 <p><b>Aleksandra, commercial management specialist</b></p>
             </div>
             <div class="container__testi">
-                <p><i>Tine is zeer professioneel en serieus in haar werk. Ze neemt de tijd om goed uit te leggen en
+                <i class="label"> <i>Tine is zeer professioneel en serieus in haar werk. Ze neemt de tijd om goed uit te
+                        leggen en
                         nuttige tips te geven. Ze heeft veel geduld met haar leerlingen en past zich aan ieders tempo
-                        aan. Tine is spontaan, enthousiast en weet een goede sfeer te creëren. </i></p>
+                        aan. Tine is spontaan, enthousiast en weet een goede sfeer te creëren. </i></i>
                 <p><b>Eni, recruiter</b></p>
             </div>
             <div class="container__testi">
-                <p><i>Ik heb een hele fijne cursus gehad bij Tine. Ze is een zeer goede lerares en mijn niveau van
-                        Nederlands verbetert veel met haar. </i></p>
+                <i class="label"> <i>Ik heb een hele fijne cursus gehad bij Tine. Ze is een zeer goede lerares en mijn
+                        niveau van
+                        Nederlands verbetert veel met haar. </i></i>
                 <p><b>Mahir, professor Egyptologie</b></p>
             </div>
         </div>
