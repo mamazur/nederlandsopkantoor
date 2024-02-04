@@ -6,6 +6,7 @@ footer {
     background: var(--primary);
     color: var(--white);
 }
+ 
 .headerb {
     display: flex;
     flex-direction: column;
@@ -15,49 +16,56 @@ footer {
     padding-bottom: 4rem;
 }
 
-.container {
-    margin: auto;
-    max-width: 1120px;
-}
 
-.container__bio > a, .container__testi{
+.container__courses>a,
+.container__testi {
     width: 31%;
 }
+
 .container__card>img {
     width: 100%;
     border-radius: 8px;
 }
 
-.container__text {
-    width: 50%;
-}
-
 .container__space {
-    width: 40%;
+    display: flex;
+    gap: 24px;
 }
 
 .container__space>img {
     border-radius: 50%;
-    height: 240px;
-    width: 240px;
+    height: 140px;
+    width: 140px;
 }
 
 .container__bio {
     padding: 3rem;
-    display: flex;
-    flex-wrap:wrap;
-    gap: 24px;
-    border-bottom: 1px solid var(--primary);
+    width: 80%;
+    margin: auto;
 }
 
+.container__courses {
+    padding: 3rem;
+    display: flex;
+    gap: 24px;
+    border-top: 1px solid var(--primary);
+}
+span {
+    background: var(--primary-variant);
+}
+
+cite{
+    color: var(--secondary);
+    font-size: 12px;
+    font-style: italic;
+}
 @media (max-width: 676px) {
     .container {
         width: calc(100%);
         margin: auto;
     }
 
-    .container__space,
-    .container__text {
+    .container__bio {
         width: 100%;
     }
 }
