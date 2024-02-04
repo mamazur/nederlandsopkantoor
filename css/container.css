@@ -6,16 +6,27 @@ footer {
     background: var(--primary);
     color: var(--white);
 }
- 
+
 .headerb {
     display: flex;
     flex-direction: column;
     gap: 24px;
     text-align: center;
-    border-bottom: 1px solid var(--primary);
     padding-bottom: 4rem;
+    background: var(--white);
 }
 
+.max_width {
+    max-width: 1120px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.container {
+    background: var(--white);
+    max-width: 1120px;
+    margin: auto;
+}
 
 .container__courses>a,
 .container__testi {
@@ -45,27 +56,39 @@ footer {
 }
 
 .container__courses {
-    padding: 3rem;
+    padding: 2rem;
     display: flex;
+    justify-content: center;
     gap: 24px;
-    border-top: 1px solid var(--primary);
 }
+
 span {
     background: var(--primary-variant);
 }
 
-cite{
+cite {
     color: var(--secondary);
     font-size: 12px;
     font-style: italic;
 }
+
+.center {
+    text-align: center;
+}
+
+.subheader {
+    color: var(--secondary);
+    border-bottom: 1px solid var(--secondary);
+}
+
 @media (max-width: 676px) {
     .container {
         width: calc(100%);
         margin: auto;
     }
 
-    .container__bio {
+    .container__bio,
+    .max_width {
         width: 100%;
     }
 }

@@ -1,7 +1,7 @@
 :root {
     --primary: #043400;
     --primary-variant: #e8f3e7;
-    --secondary: #5E5E5E;
+    --secondary: #b0b0b0;
     --background: #f6f7ff;
     --text: #0B0C0E;
     --white: #ffffff
@@ -19,9 +19,7 @@ body {
     font-family: 'Inter';
     font-style: normal;
     margin: auto;
-    background: var(--white);
     color: var(--text);
-    max-width: 1120px;
 }
 
 h1 {
@@ -57,7 +55,7 @@ h2 {
     color: var(--white);
     background-image: url("../img/title.webp");
     background-size: auto;
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid var(--secondary);
 }
 
 p {
@@ -93,6 +91,12 @@ button,
     color: var(--white);
     border-radius: 6px;
     border: 1px solid var(--white);
+}
+
+.light {
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
 }
 
 a {
