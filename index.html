@@ -1,184 +1,294 @@
-<!DOCTYPE html>
-<html lang="nl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nederlands op kantoor</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/navigation.css" rel="stylesheet">
-    <link href="css/container.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/ico" href="favicon.ico">
-    <link rel="preload" fetchpriority="high" as="image" href="./img/title.webp" type="image/webp">
-    <meta name="description"
-        content="Docent zakelijk Nederlands voor professionals. Helping professionals boost their Dutch language skills">
-</head>
 
-<body>
-    <section class="top-nav">
-        <aside>
-            <img src="img/flag-nl.svg" alt="flag netherlands" width="50" height="60">
-            <img src="img/flag-be.svg" alt="flag belgium" width="50" height="60">
-        </aside>
+    <style>
+      :root {
+        --bg: #f9fafb;
+        --text: #1f2937;
+        --muted: #6b7280;
+        --primary: #7c3aed;
+        --card: #ffffff;
+        --border: #e5e7eb;
+      }
 
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-        <ul class="menu">
-            <li> <a href="https://www.facebook.com/groups/209963557131414" target="_blank">FACEBOOK</a></li>
-            <li> <a href="https://www.linkedin.com/in/tine-vermoere-860683172/" target="_blank">LINKEDIN</a></li>
-            <li> <a href="https://www.youtube.com/channel/UCLAfOUTA-qUWsczRJmjZPPw" target="_blank">YOUTUBE</a></li>
-            <li> <a href="https://www.buymeacoffee.com/businessdutch/posts" target="_blank">BLOG</a></li>
-            <li> <a href="https://www.buymeacoffee.com/businessdutch/extras" target="_blank">SHOP</a></li>
-            <li> <a href="https://www.buymeacoffee.com/businessdutch/e/231764" target="_blank">EBOOK</a></li>
-        </ul>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      /* Header */
+      .header {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 14px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav a {
+        margin-left: 18px;
+        text-decoration: none;
+        color: var(--muted);
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
+
+      .nav a:hover {
+        color: var(--primary);
+      }
+
+      /* Hero */
+      .hero {
+        max-width: 800px;
+        margin: 100px auto 50px;
+        padding: 0 20px;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 2.6rem;
+        line-height: 1.2;
+        margin-bottom: 16px;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        color: var(--muted);
+      }
+
+      /* About */
+      .about {
+        max-width: 750px;
+        margin: 0 auto 50px;
+        padding: 0 20px;
+      }
+
+      .about p {
+        margin-bottom: 1.3em;
+        font-size: 1.05rem;
+      }
+
+      /* Cards */
+      .cards {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+
+      .card {
+        background: var(--card);
+        padding: 18px;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+        transition: all 0.2s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 12px;
+        margin: 10px 0 14px;
+      }
+
+      .card p {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .card h3 {
+        margin: 8px 0 12px;
+        font-size: 1.2rem;
+      }
+
+      /* Button */
+      .btn-primary {
+        margin-top: auto;
+        background: linear-gradient(135deg, #7c3aed, #6366f1);
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 500;
+        box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+        transition: all 0.2s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 80px;
+        padding: 40px 20px;
+        border-top: 1px solid var(--border);
+        background: #fff;
+      }
+
+      .footer-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+      }
+
+      .footer h4 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+      }
+
+      .footer p,
+      .footer a {
+        font-size: 0.85rem;
+        color: var(--muted);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .footer a:hover {
+        color: var(--primary);
+      }
+
+      .footer-bottom {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <img src="./img/me.webp" alt="Avatar" class="avatar" />
+      <div class="nav">
+        <a href="#">Blog</a>
+        <a href="#">Shop</a>
+        <a href="#">Kontakt</a>
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h2>Nederlands op kantoor</h2>
+      <p>Helping professionals boost their Dutch language skills</p>
     </section>
-    <div class="headerb">
-        <div class="title" id="title"></div>
-        <h1>Nederlands op kantoor</h1>
-        <p class="label">helping professionals boost their Dutch language skills</p>
+
+    <!-- About -->
+    <section class="about">
+      <p>
+        Ik heet Tine Vermoere en ik ben docent zakelijk Nederlands. Al meer dan
+        10 jaar geef ik met veel passie les aan professionals van verschillende
+        bedrijven. Taal zit in mijn DNA. Ik studeerde Germaanse Taal- en
+        Letterkunde en leerde meerdere talen waaronder Frans, Duits, Spaans en
+        Turks. Ik heb 2 e-learnings ontworpen voor studenten met een
+        intermediair niveau. In het totaal schreef ik hiervoor meer dan 250
+        oefeningen op zakelijke woordenschat en grammatica! Een voorsmaakje van
+        de inhoud en de stijl zie je in mijn YouTubefilmpjes.
+      </p>
+      <p>
+        Naast het lesgeven werk ik deeltijds als opleidingsverantwoordelijke bij
+        een multinational. Mijn eigen bedrijfservaring is een grote meerwaarde
+        tijdens mijn lessen. Sinds 2007 woon en werk ik in Berlijn. In mijn
+        vrije tijd ga ik heel graag naar concerten. Ik zing ook als soprano in
+        een koor. Ik hou veel van reizen en nieuwe mensen ontmoeten. Maar
+        bovenal ben ik mama van Finn, het allerliefste jongetje ter wereld.
+      </p>
+    </section>
+
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card">
+        <p>Zakelijk Nederlands B1+/B2 e-learning</p>
+        <h3>€29</h3>
+        <img src="./img/b1_b2_class_29.webp" />
+        <button class="btn-primary">Buy with PayPal</button>
+      </div>
+
+      <div class="card">
+        <p>Woordenschat training</p>
+        <h3>€19</h3>
+        <img src="./img/b1_b2_class_19.webp" />
+        <button class="btn-primary">Buy with PayPal</button>
+      </div>
+
+      <div class="card">
+        <p>Grammatica training</p>
+        <h3>€19</h3>
+        <img src="./img/b1_b2_class_19_grammar.webp" />
+        <button class="btn-primary">Buy with PayPal</button>
+      </div>
+    </section>
+
+    <!-- Footer (German law ready) -->
+    <footer class="footer">
+      <div class="footer-inner">
         <div>
-            <a href="https://www.buymeacoffee.com/businessdutch/extras" class="button" target="_blank">GO TO COURSES</a>
+          <h4>Kontakt</h4>
+          <p>Tine Vermoere</p>
+          <p>Berlin, Deutschland</p>
+          <p>Email: your@email.com</p>
         </div>
-    </div>
-    <div class="subheader">
-        <p class="label max_width">
-            Over mij
-        </p>
-    </div>
-    <div class="container">
-        <div class="container__bio">
-            <div class="container__space">
-                <img src="./img/me.webp" alt="Over mij">
-                <h2>
-                    Docent zakelijk Nederlands voor professionals
-                </h2>
-            </div>
-            <p>
-                Ik heet Tine Vermoere en ik ben docent zakelijk Nederlands. Al meer dan 10 jaar geef ik met veel
-                passie les aan professionals van verschillende bedrijven. Taal zit in mijn DNA. Ik studeerde
-                Germaanse Taal- en Letterkunde en leerde meerdere talen waaronder Frans, Duits, Spaans en Turks. Ik
-                heb 2 e-learnings ontworpen voor studenten met een intermediair niveau. In het
-                totaal
-                schreef ik
-                hiervoor meer dan 250 oefeningen op zakelijke woordenschat en grammatica! Een voorsmaakje
-                van
-                de
-                inhoud en de stijl zie je in mijn YouTubefilmpjes.
-                <br>
-                <br>
-                Naast het lesgeven werk ik deeltijds als opleidingsverantwoordelijke bij een multinational. Mijn
-                eigen bedrijfservaring is een grote meerwaarde tijdens mijn lessen. Sinds 2007 woon en werk ik in
-                Berlijn. In mijn vrije tijd ga ik heel graag naar concerten. Ik zing ook als soprano in een koor. Ik
-                hou veel van reizen en nieuwe mensen ontmoeten. Maar bovenal ben ik mama van Finn, het allerliefste
-                jongetje ter wereld.
-            </p>
-        </div>
-        <div class="center">
-            <a href="https://www.youtube.com/channel/UCLAfOUTA-qUWsczRJmjZPPw" class="button light"
-                target="_blank">YOUTUBE</a>
-        </div>
-    </div>
-    <div class="subheader">
-        <p class="label max_width">
-            Go to courses
-        </p>
-    </div>
-    <div class="container">
-        <div class="container__courses">
-            <a href="https://www.buymeacoffee.com/businessdutch/extras" target="_blank">
-                <div class="container__card">
-                    <img src="./img/b1_b2_class_29.webp" alt="Illustration for grammar class">
-                    <p><b>zakelijk Nederlands B1+/B2 e-learnings woordenschat en grammatica</b></p>
-                </div>
-            </a>
-            <a href="https://www.buymeacoffee.com/businessdutch/extras" target="_blank">
-                <div class="container__card">
-                    <img src="./img/b1_b2_class_19.webp" alt="Illustration for e-learning class">
-                    <p><b>zakelijk Nederlands B1+/B2 e-learning woordenschat</b></p>
-                </div>
-            </a>
-            <a href="https://www.buymeacoffee.com/businessdutch/extras" target="_blank">
-                <div class="container__card">
-                    <img src="./img/b1_b2_class_19_grammar.webp" alt="Illustration for e-learning grammar class">
-                    <p><b>zakelijk Nederlands B1+/B2 e-learning grammatica</b></p>
-                </div>
-            </a>
-        </div>
-        <div class="container__courses">
-            <a href="https://www.buymeacoffee.com/businessdutch/e/33527" target="_blank">
-                <div class="container__card">
-                    <img src="./img/coaching_schriftelijk.webp" alt="Illustration for correspondence class">
-                    <p><b>coaching schriftelijk Nederlands</b></p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="subheader">
-        <p class="label max_width">
-            E-Book
-        </p>
-    </div>
-    <div class="container">
-        <div class="container__courses">
-            <a href="https://www.buymeacoffee.com/businessdutch/e/231764" target="_blank">
-                <div class="container__card">
-                    <img src="./img/ebook.webp" alt="e-book 50 veelgemaakte fouten in het Nederlands">
-                    <p><b>e-book 50 veelgemaakte fouten in het Nederlands</b></p>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="subheader">
-        <p class="label max_width">
-            Testimonials
-        </p>
-    </div>
-    <div class="container">
-        <div class="container__courses">
-            <div class="container__testi">
-                <cite>
-                    Tine is een professionele docent Nederlands. Tijdens onze lessen toonde ze een hoge mate van
-                    betrokkenheid en professionaliteit. Ik heb geleerd hoe ik de Nederlandse taal voor
-                    werkdoeleinden kan gebruiken. Ze is een positief en vriendelijk persoon, met een geweldige
-                    houding ten opzichte van lesgeven.
-                    <br> <br>
-                    <b>Aleksandra, commercial management specialist</b>
-                </cite>
-            </div>
-            <div class="container__testi">
-                <cite>Tine is zeer professioneel en serieus in haar werk. Ze neemt de tijd om goed uit te
-                    leggen en
-                    nuttige tips te geven. Ze heeft veel geduld met haar leerlingen en past zich aan ieders tempo
-                    aan. Tine is spontaan, enthousiast en weet een goede sfeer te creëren.
-                    <br> <br>
-                    <b>Eni, recruiter</b>
-                </cite>
-            </div>
-            <div class="container__testi">
-                <cite>Ik heb een hele fijne cursus gehad bij Tine. Ze is een zeer goede lerares en mijn
-                    niveau van
-                    Nederlands verbetert veel met haar.
-                    <br> <br>
-                    <b>Mahir, professor Egyptologie</b>
-                </cite>
-            </div>
-        </div>
-    </div>
 
-    <footer>
-        <div class="footer__left">
-            Designed
-            <script>document.write(/\d{4}/.exec(Date())[0])</script>
+        <div>
+          <h4>Rechtliches</h4>
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutzerklärung</a>
         </div>
-        <div class="footer__right">
-             nederlandsopkantoor@gmail.com
+
+        <div>
+          <h4>Inhalte</h4>
+          <a href="#">Blog</a>
+          <a href="#">Shop</a>
+          <a href="#">Kurse</a>
         </div>
+      </div>
+
+      <div class="footer-bottom">© 2026 Nederlands op kantoor</div>
     </footer>
-</body>
-
+  </body>
 </html>
