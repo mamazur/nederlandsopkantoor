@@ -266,6 +266,74 @@
         font-size: 0.9rem;
         color: var(--muted);
       }
+      .testimonials {
+        padding: 70px 20px;
+        text-align: center;
+      }
+
+      .testimonials h2 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+
+      .testimonial-grid {
+        max-width: 900px;
+        margin: 40px auto 0;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+
+      /* Extend your existing .card */
+      .testimonial {
+        text-align: left;
+        position: relative;
+      }
+
+      /* Quote styling */
+      .quote {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: var(--text);
+        margin-bottom: 20px;
+      }
+
+      /* Subtle quote mark (Josh style detail) */
+      .quote::before {
+        content: "“";
+        font-size: 2.5rem;
+        position: absolute;
+        top: 10px;
+        left: 16px;
+        opacity: 0.08;
+      }
+
+      /* Author row */
+      .author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: auto;
+      }
+
+      /* Small avatar variant */
+      .avatar.small {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #7c3aed, #6366f1);
+        color: white;
+        border-radius: 10px;
+      }
+
+      /* Author text */
+      .author p {
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
     </style>
   </head>
 
@@ -351,7 +419,7 @@
         </a>
       </div>
     </section>
- 
+
     <!-- Cards -->
     <section class="cards">
       <div class="card">
@@ -375,7 +443,59 @@
         <button class="btn-primary">Buy with PayPal</button>
       </div>
     </section>
+    <section class="testimonials">
+      <h2>What people are saying</h2>
+      <p class="subtitle">Testimonials from my students</p>
 
+      <div class="testimonial-grid">
+        <div class="card testimonial">
+          <p class="quote">
+            Tine is een professionele docent Nederlands. Tijdens onze lessen
+            toonde ze een hoge mate van betrokkenheid en professionaliteit. Ik
+            heb geleerd hoe ik de Nederlandse taal voor werkdoeleinden kan
+            gebruiken. Ze is een positief en vriendelijk persoon, met een
+            geweldige houding ten opzichte van lesgeven.
+          </p>
+          <div class="author">
+            <div class="avatar small">A</div>
+            <div>
+              <strong>Aleksandra</strong>
+              <p>Commercial Management Specialist</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial">
+          <p class="quote">
+            Tine is zeer professioneel en serieus in haar werk. Ze neemt de tijd
+            om goed uit te leggen en nuttige tips te geven. Ze heeft veel geduld
+            met haar leerlingen en past zich aan ieders tempo aan. Tine is
+            spontaan, enthousiast en weet een goede sfeer te creëren.
+          </p>
+          <div class="author">
+            <div class="avatar small">L</div>
+            <div>
+              <strong>Eni</strong>
+              <p>Recruiter</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial">
+          <p class="quote">
+            Ik heb een hele fijne cursus gehad bij Tine. Ze is een zeer goede
+            lerares en mijn niveau van Nederlands verbetert veel met haar.
+          </p>
+          <div class="author">
+            <div class="avatar small">S</div>
+            <div>
+              <strong>Mahir</strong>
+              <p>Professor Egyptologie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Footer (German law ready) -->
     <footer class="footer">
       <div class="footer-inner">
@@ -383,7 +503,7 @@
           <h4>Kontakt</h4>
           <p>Tine Vermoere</p>
           <p>Berlin, Deutschland</p>
-          <p>Email: your@email.com</p>
+          <p>Email: nederlandsopkantoor@gmail.com</p>
         </div>
 
         <div>
