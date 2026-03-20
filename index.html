@@ -198,6 +198,74 @@
         font-size: 0.8rem;
         color: var(--muted);
       }
+      .social-section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .social-section h2 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+
+      .subtitle {
+        color: var(--muted);
+        margin-bottom: 30px;
+      }
+
+      /* Reuse existing grid logic */
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 24px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* 🔥 Extend your existing .card instead of redefining it */
+      .social-card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        text-decoration: none;
+        color: var(--text);
+        padding: 18px;
+      }
+
+      /* Keep your existing hover system consistent */
+      .social-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Icon styling aligned with your system */
+      .icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-weight: bold;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      /* Softer brand colors (match your muted aesthetic) */
+      .youtube .icon {
+        background: linear-gradient(135deg, #ff6a6a, #ff0000);
+      }
+
+      .linkedin .icon {
+        background: linear-gradient(135deg, #0a66c2, #005582);
+      }
+
+      .facebook .icon {
+        background: linear-gradient(135deg, #4c6ef5, #1877f2);
+      }
+
+      .social-card p {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
     </style>
   </head>
 
@@ -206,16 +274,30 @@
     <div class="header">
       <img src="./img/me.webp" alt="Avatar" class="avatar" />
       <div class="nav">
-        <a href="#">Blog</a>
-        <a href="#">Shop</a>
-        <a href="#">Kontakt</a>
+        <a
+          href="https://www.buymeacoffee.com/businessdutch/posts"
+          target="_blank"
+          >Blog</a
+        >
+        <a
+          href="https://www.buymeacoffee.com/businessdutch/extras"
+          target="_blank"
+          >Shop</a
+        >
+        <a
+          href="https://www.buymeacoffee.com/businessdutch/e/231764"
+          target="_blank"
+          >eBook</a
+        >
       </div>
     </div>
 
     <!-- Hero -->
     <section class="hero">
       <h2>Nederlands op kantoor</h2>
-      <p>Helping professionals boost their Dutch language skills</p>
+      <p class="subtitle">
+        Helping professionals boost their Dutch language skills
+      </p>
     </section>
 
     <!-- About -->
@@ -239,7 +321,37 @@
         bovenal ben ik mama van Finn, het allerliefste jongetje ter wereld.
       </p>
     </section>
+    <section class="social-section">
+      <h2>Find me around the web</h2>
+      <p class="subtitle">I share stuff, sometimes useful</p>
 
+      <div class="social-grid">
+        <a href="#" class="card social-card youtube">
+          <span class="icon">▶</span>
+          <div>
+            <strong>YouTube</strong>
+            <p>Videos & tutorials</p>
+          </div>
+        </a>
+
+        <a href="#" class="card social-card linkedin">
+          <span class="icon">in</span>
+          <div>
+            <strong>LinkedIn</strong>
+            <p>Career & updates</p>
+          </div>
+        </a>
+
+        <a href="#" class="card social-card facebook">
+          <span class="icon">f</span>
+          <div>
+            <strong>Facebook</strong>
+            <p>Community & posts</p>
+          </div>
+        </a>
+      </div>
+    </section>
+ 
     <!-- Cards -->
     <section class="cards">
       <div class="card">
