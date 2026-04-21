@@ -181,7 +181,8 @@
       }
 
       /* Button */
-      .btn-primary {
+      .btn-primary,
+      .paypal-buy-btn {
         margin-top: auto;
         background: linear-gradient(135deg, #7c3aed, #6366f1);
         color: white;
@@ -391,6 +392,15 @@
         color: var(--muted);
       }
     </style>
+    <script src="https://www.paypal.com/sdk/js?client-id=AZJfGgYehkjKrFjogrV-N63qfesvxKZz8MhNUSslVcCuVVp-bbzTb6y5BT6nlI5oEvQXvGlPv2YLIagZ&components=hosted-buttons"></script>
+
+    <script>
+      paypal
+        .HostedButtons({
+          hostedButtonId: "4GA5PLP6HWX7W",
+        })
+        .render("#paypal-container-E1A35C3C-5B04-45F4-95A3-D3F0CA607B98");
+    </script>
   </head>
 
   <body>
@@ -478,26 +488,7 @@
 
     <!-- Cards -->
     <section class="cards">
-      <div class="card">
-        <p>Zakelijk Nederlands B1+/B2 e-learning</p>
-        <h3>€29</h3>
-        <img src="./img/b1_b2_class_29.webp" />
-        <button class="btn-primary">Buy with PayPal</button>
-      </div>
-
-      <div class="card">
-        <p>Woordenschat training</p>
-        <h3>€19</h3>
-        <img src="./img/b1_b2_class_19.webp" />
-        <button class="btn-primary">Buy with PayPal</button>
-      </div>
-
-      <div class="card">
-        <p>Grammatica training</p>
-        <h3>€19</h3>
-        <img src="./img/b1_b2_class_19_grammar.webp" />
-        <button class="btn-primary">Buy with PayPal</button>
-      </div>
+      <div id="paypal-container-E1A35C3C-5B04-45F4-95A3-D3F0CA607B98"></div>
     </section>
     <section class="testimonials">
       <h2>What people are saying</h2>
